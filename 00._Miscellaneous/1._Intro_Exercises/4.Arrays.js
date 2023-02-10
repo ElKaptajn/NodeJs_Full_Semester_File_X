@@ -62,10 +62,19 @@ console.log("Dinner Tray: " + dinnerTray);
 const lettersExpanded = ["a","b","c", "d", "e", "f", "g", "h"];
 
 // log every second char in the array starting from b
+
+// OLD SOLUTION
+/*
 let counter = 0;
 lettersExpanded.forEach( (element) => { 
     if(counter % 2 === 1) console.log(element);
     counter++;
+});
+*/
+
+
+lettersExpanded.forEach( (element) => { 
+    if(element.indexOf % 2 === 1) console.log(element);
 });
 
 // --------------------------------------
