@@ -1,0 +1,9 @@
+anatomy of an 8Y2j2B2I16UqZlKIOHnYkJ4RSvpJ00ywy9IWjmuxYw
+
+protocol
+ |       domain         endpoint    path variable
+http://localhost:8080/kickdinosaur/:id?size=1200
+                                            query string
+
+//You can send data two ways in a get request: path variable and query string
+
