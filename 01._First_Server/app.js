@@ -2,6 +2,8 @@
 const express = require("express");
 const app = express();
 
+app.use(express.json());
+
 app.get("/", (req, res) => {
     res.send({message: "Our first route"}    );
 });
@@ -9,7 +11,7 @@ app.get("/", (req, res) => {
 let bicycleSpins = 0;
 let kicks = 0;
 
-app.get("/spinthebicycle", (rep, res) => {
+app.get("/spinthebicycle", (req, res) => {
     bicycleSpins += 1;
     res.send({ message: `Number of spins: ${bicycleSpins}}`});
 });
@@ -19,7 +21,7 @@ app.get("/spinthebicycle", (rep, res) => {
         Create a new route that kicks the dinosaur
 */
 
-app.get("/kickthedinosaur", (rep, res) => {
+app.get("/kickthedinosaur", (req, res) => {
     kicks += 1;
     res.send({ message: `You kicked the dinosaur for the ${kicks} time! - Dinosaur says: ow, ow, ow`});
 });
@@ -41,6 +43,11 @@ app.get("/bat", (req, res) => {
 app.get("/bottle/:bottleSize", (req, res) => {
     console.log();
     res.send({ bottleSize: req.params.bottleSize });
+});
+
+app.post("/package", (req, res) => {
+    console.log(req.body);
+    res.send({ message: req.body });
 });
 
 app.listen(8080);
