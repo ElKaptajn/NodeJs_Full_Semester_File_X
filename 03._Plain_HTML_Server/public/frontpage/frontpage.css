@@ -1,0 +1,28 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: tomato;
+}
+
+h1{
+    font-size: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 800px;
+}
+
+.background {
+    background-color: aquamarine;
+}
+
+.centerInDiv {
+    display: flex;
+    justify-content: center;
+}

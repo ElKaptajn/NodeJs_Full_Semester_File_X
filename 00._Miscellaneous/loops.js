@@ -7,19 +7,13 @@ const rocks = [
 
 console.log(rocks);
 
-const rocksAgedOneYear = rocks.filter(rock => {
-    return rock.age % 2 === 0;
-});
+const rocksWithEvenAge = rocks.filter(rock => rock.age % 2 === 0);
+
+console.log(rocksWithEvenAge);
+
+const rocksAgedOneYear = rocks.map( rock => ({ ...rock, age: rock.age+1}));
 
 console.log(rocksAgedOneYear);
-
-/*
-const rocksAgedOneYear = rocks.map( rock=>{
-    rock.age++
-    return rock;
-});
-
-*/ 
 
 /*
 const rocksAgedOneYear = [];
